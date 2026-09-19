@@ -24,31 +24,6 @@ MultiCLIA is a command-line application for macOS and Linux that bundles everyda
 
 ---
 
-## AI Bootstrap Prompt
-
-> Copy and paste into Claude, Cursor, Codex, or GPT:
-
-```text
-You are working on MultiCLIA — a Java CLI app that bundles developer tools
-(AI chat, cryptography, QR, translation, network, weather, ASCII art)
-into one interactive terminal interface.
-
-Stack: Java 17+, Maven, JLine 3, OpenAI API, DeepL API, BouncyCastle, ZXing, OkHttp, Gson/Jackson
-Entry point: src/main/java/core/init/ (app bootstrapper)
-Menu routing: src/main/java/core/CommandManager.java
-Run: ./start.sh  OR  brew install akillot/multiclia/multiclia && multiclia
-
-Non-obvious:
-- Adding a new tool module: create a package under src/main/java/tools/,
-  then register the command in CommandManager.java — that is the only wiring needed
-- UI and navigation live in core/ui/; the page model is in core/Page.java
-- API keys (OpenAI, DeepL) are set at runtime — check core/init/ for where they are read
-- Each tool module is self-contained — no shared state through a service layer
-- Detailed extension guide: documentation/Extension_Guideline.md
-```
-
----
-
 ## Features
 
 | Module | What it does |
